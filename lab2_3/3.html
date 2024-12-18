@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web-документ с CSS</title>
+    <!-- Внешний стиль -->
+    <link rel="stylesheet" href="3css.css">
+    <!-- Внутренний стиль -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f8ff;
+            margin: 0;
+            padding: 0;
+        }
+
+        .content {
+            text-align: center;
+            padding: 20px;
+        }
+
+        h1 {
+            color: #347c99;
+        }
+
+        .intro {
+            color: #555;
+        }
+
+        #footer {
+            background-color: #347c99;
+            color: white;
+            padding: 10px;
+            text-align: center;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <h1 id="main-heading">Пример Web-документа с применением CSS</h1>
+
+        <p class="intro" style="color: green; font-size: 18px;">Этот документ создан с применением трех методов подключения CSS: inline, внутренний и внешний.</p>
+
+        <p class="description">
+            Мы можем использовать различные методы применения CSS в зависимости от требований. Для небольших элементов часто применяются in-line стили, для крупных — внешние таблицы стилей.
+        </p>
+
+    </div>
+
+    <div id="footer">
+        © 2024 Пример Web-документа
+    </div>
+
+</body>
+</html>

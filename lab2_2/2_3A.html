@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Заказ птицы</title>
+    <link rel="stylesheet" href="2_3A.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>ЗАО ПТИЦЕФАБРИКА №1</h1>
+        
+        <form class="order-form">
+            <div class="form-group">
+                <label for="surname">Фамилия:</label>
+                <input type="text" id="surname" required>
+            </div>
+            <div class="form-group">
+                <label for="initials">Инициалы:</label>
+                <input type="text" id="initials" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Пароль:</label>
+                <input type="password" id="password" required>
+            </div>
+            <div class="form-group">
+                <label for="address">Адрес получателя:</label>
+                <input type="text" id="address" required>
+            </div>
+            <div class="form-group">
+                <label for="quantity">Количество:</label>
+                <input type="number" id="quantity" required>
+            </div>
+            <div class="form-group">
+                <label for="type">Тип:</label>
+                <select id="type" required>
+                    <option value="куриные">Куриные</option>
+                    <option value="говяжьи">Говяжьи</option>
+                    <option value="свинина">Свинина</option>
+                    <option value="индюшачьи">Индюшачьи</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="grade">Качество:</label>
+                <select id="grade" required>
+                    <option value="отборные">Отборные</option>
+                    <option value="второсортные">Второсортные</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>Доставка:</label>
+                <div class="checkbox-group">
+                    <label><input type="radio" name="delivery" value="почтой"> Почтой</label>
+                    <label><input type="radio" name="delivery" value="электронно"> Электронно</label>
+                    <label><input type="radio" name="delivery" value="курьером"> Курьером</label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label>Tребуется накладная:</label>
+                <label><input type="checkbox" id="invoice"></label>
+            </div>
+            <div class="form-group">
+                <label for="additional-info">Дополнительная информация:</label>
+                <textarea id="additional-info" rows="4"></textarea>
+            </div>
+            <div class="button-group">
+                <button type="submit">Заказать</button>
+                <button type="button" onclick="cancelOrder()">Отменить</button>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        function cancelOrder() {
+            // Логика отмены заказа
+            document.querySelector('.order-form').reset();
+        }
+    </script>
+
+</body>
+</html>
